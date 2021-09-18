@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".CountryActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="Search Here"
+        android:imeOptions="actionSearch"
+        android:background="@drawable/search_background"
+        android:maxLines="1"
+        android:drawablePadding="4dp"
+        android:layout_margin="8dp"
+        android:id="@+id/search_bar"
+        android:padding="8dp"
+        android:drawableLeft="@drawable/search"/>
+
+    <RelativeLayout
+        android:layout_marginVertical="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Country Name"
+            android:textColor="@color/black"
+            android:layout_marginStart="12dp"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/black"
+            android:text="Total Cases"
+            android:textSize="@dimen/text_size"
+            android:fontFamily="sans-serif-condensed"/>
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countries"
+        tools:listitem="@layout/country_item_layout"/>
+
+</LinearLayout>
